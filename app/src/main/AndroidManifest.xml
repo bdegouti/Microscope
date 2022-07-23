@@ -10,7 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Microscope">
         <activity
-            android:name=".MainActivity"
+            android:name=".AddPeriodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SetupStartPeriodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SetupEndPeriodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PeriodScreen"
+            android:exported="true" />
+        <activity
+            android:name=".PaletteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
