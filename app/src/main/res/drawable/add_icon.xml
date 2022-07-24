@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="line">
-            <stroke android:width="30dp" android:color="@android:color/black" />
+            <stroke android:width="10dp" android:color="@android:color/black" />
         </shape>
     </item>
     <item>
@@ -12,23 +12,23 @@
             android:pivotY="50%"
             android:toDegrees="-90">
             <shape android:shape="line">
-                <stroke android:width="30dp" android:color="@android:color/black" />
+                <stroke android:width="10dp" android:color="@android:color/black" />
             </shape>
         </rotate>
     </item>
-    <item android:start="20dp" android:end="20dp">
+    <item android:start="6dp" android:end="6dp">
         <shape android:shape="line">
-            <stroke android:width="10dp" android:color="@android:color/white" />
+            <stroke android:width="3dp" android:color="@android:color/white" />
         </shape>
     </item>
-    <item android:start="20dp" android:end="20dp">
+    <item android:start="6dp" android:end="6dp">
         <rotate
             android:fromDegrees="90"
             android:pivotX="50%"
             android:pivotY="50%"
             android:toDegrees="-90">
             <shape android:shape="line">
-                <stroke android:width="10dp" android:color="@android:color/white" />
+                <stroke android:width="3dp" android:color="@android:color/white" />
             </shape>
         </rotate>
     </item>

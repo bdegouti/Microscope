@@ -42,6 +42,7 @@ public class PeriodScreen extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        addModeOn = false;
         populatePeriodsList();
         addModeOn = false;
     }
