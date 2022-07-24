@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 public class GameManager {
+    String gameName;
     private final ArrayList<Period> periods;
     private final ArrayList<Player> players;
     private Palette palette;
@@ -17,6 +18,7 @@ public class GameManager {
     private static GameManager instance;
 
     private GameManager(){
+        gameName = "";
         players = new ArrayList<>();
         periods = new ArrayList<>();
         palette = null;
@@ -135,6 +137,14 @@ public class GameManager {
 
     public void setPalette(Palette palette) {
         this.palette = palette;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public void setGameName(String gameName) {
+        this.gameName = gameName;
     }
 
     public String convertGameToJSON(){

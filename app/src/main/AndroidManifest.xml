@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Microscope">
         <activity
+            android:name=".MainMenuActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".AddPeriodActivity"
             android:exported="true" />
         <activity
@@ -25,14 +34,8 @@
             android:name=".PaletteActivity"
             android:exported="true" />
         <activity
-            android:name=".StartActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".NewGameSetup"
+            android:exported="true"/>
     </application>
 
 </manifest>

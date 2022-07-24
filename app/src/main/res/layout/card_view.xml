@@ -54,8 +54,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:ellipsize="end"
-                android:maxLines="5"
                 android:singleLine="false"
                 android:text="Content"
                 android:textAlignment="textStart"

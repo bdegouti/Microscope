@@ -4,17 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
+    tools:context=".NewGameSetup">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/start_vert10"
+        android:id="@+id/hori20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/start_vert90"
+        android:id="@+id/vert90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -28,13 +35,15 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline80"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline20">
+        app:layout_constraintTop_toTopOf="@+id/guideline45">
 
         <RadioButton
             android:id="@+id/start_RB_1player"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:minHeight="48dp"
             android:text="1 Player"
             android:textSize="30sp" />
 
@@ -43,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="monospace"
             android:text="2 Players"
             android:textSize="30sp" />
 
@@ -51,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="monospace"
             android:text="3 Players"
             android:textSize="30sp" />
 
@@ -59,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="monospace"
             android:text="4 Players"
             android:textSize="30sp" />
 
@@ -67,16 +79,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="monospace"
             android:text="5 Players"
             android:textSize="30sp" />
 
-        <RadioButton
-            android:id="@+id/start_RB_6players"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="6 players"
-            android:textSize="30sp" />
     </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
@@ -90,34 +96,34 @@
         android:id="@+id/start_CV_playerNumText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
         app:cardCornerRadius="35dp"
         app:cardElevation="20dp"
         app:cardMaxElevation="20dp"
         app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
-        app:layout_constraintEnd_toStartOf="@+id/start_vert90"
-        app:layout_constraintStart_toStartOf="@+id/start_vert10"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/guideline45"
+        app:layout_constraintEnd_toStartOf="@+id/vert90"
+        app:layout_constraintStart_toStartOf="@+id/vert10"
+        app:layout_constraintTop_toTopOf="@+id/hori20">
 
         <TextView
             android:id="@+id/start_TV_playerNumText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="sans-serif-condensed-light"
+            android:fontFamily="monospace"
             android:gravity="center"
             android:text="Choose number of players:"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="40sp" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline20"
+        android:id="@+id/guideline45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <Button
         android:id="@+id/start_BTN_startButton"
@@ -128,8 +134,22 @@
         android:text="Start"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/start_vert90"
-        app:layout_constraintStart_toStartOf="@+id/start_vert10"
+        app:layout_constraintEnd_toStartOf="@+id/vert90"
+        app:layout_constraintStart_toStartOf="@+id/vert10"
         app:layout_constraintTop_toTopOf="@+id/guideline80" />
+
+    <EditText
+        android:id="@+id/start_ET_gameName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:text="New Game"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/hori20"
+        app:layout_constraintEnd_toStartOf="@+id/vert90"
+        app:layout_constraintStart_toStartOf="@+id/vert10"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

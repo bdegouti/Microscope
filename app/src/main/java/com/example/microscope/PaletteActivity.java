@@ -45,6 +45,10 @@ public class PaletteActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    private void finishActivity(){
+        this.finish();
+    }
+
     private boolean checkIfTextEmpty(){
         TextView entryTV = findViewById(R.id.palette_UTXT_enterRule);
         return entryTV.getText().toString().equals("");
@@ -86,7 +90,9 @@ public class PaletteActivity extends AppCompatActivity {
             gm.setPalette(palette);
 
             Intent intent = SetupStartPeriodActivity.makeIntent(PaletteActivity.this);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
+            finishActivity();
         }
 
         TextView playerTurn = findViewById(R.id.palette_TV_currPlayer);

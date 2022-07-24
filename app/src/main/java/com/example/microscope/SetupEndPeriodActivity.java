@@ -1,5 +1,7 @@
 package com.example.microscope;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -33,6 +35,10 @@ public class SetupEndPeriodActivity extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context c){ return new Intent(c, SetupEndPeriodActivity.class);}
+
+    private void finishActivity(){
+        this.finish();
+    }
 
     @Override
     public void onBackPressed() {
